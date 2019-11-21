@@ -1,12 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Layout from '@/layout/index.vue'
 
 Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
     name: 'dashboard',
-    component: () => import('../views/Dashboard.vue')
+    component: () => import('@/layout/index.vue'),
+    redirect: '/dasboard'
+    // children: [
+    //   {
+    //     path: 'dashboard',
+    //     name: 'Dashboard',
+    //     component: () => import('@/views/Dashboard'),
+    //     meta: { title: 'Dashboard', icon: 'dashboard' }
+    //   }
+    // ]
   },
   {
     path: '/form',
