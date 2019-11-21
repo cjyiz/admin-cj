@@ -6,8 +6,8 @@
                 :to="resolvePath(onlyOneChild.path)">
         <el-menu-item :index="resolvePath(onlyOneChild.path)"
                       :class="{'submenu-title-noDropdown':!isNest}">
-          <item :icon="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)"
-                :title="onlyOneChild.meta.title" />
+          <!-- <item :icon="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)"
+                :title="onlyOneChild.meta.title" /> -->
         </el-menu-item>
       </app-link>
     </template>
@@ -17,9 +17,9 @@
                 :index="resolvePath(item.path)"
                 popper-append-to-body>
       <template slot="title">
-        <item v-if="item.meta"
+        <!-- <item v-if="item.meta"
               :icon="item.meta && item.meta.icon"
-              :title="item.meta.title" />
+              :title="item.meta.title" /> -->
       </template>
       <sidebar-item v-for="child in item.children"
                     :key="child.path"
@@ -34,13 +34,14 @@
 <script>
 import path from 'path'
 import { isExternal } from '@/utils/validate'
-import Item from './Item'
+// import Item from './Item'
 import AppLink from './Link'
 import FixiOSBug from './FixiOSBug'
 
 export default {
   name: 'SidebarItem',
-  components: { Item, AppLink },
+  // components: { Item, AppLink },
+  components: { AppLink },
   mixins: [FixiOSBug],
   props: {
     // route object

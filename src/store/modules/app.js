@@ -22,7 +22,7 @@ const mutations = {
     state.sidebar.opened = false
     state.sidebar.widthoutAnimation = withoutAnimation
   },
-  TOOGLE_DEVICE: (state, device) => {
+  TOGGLE_DEVICE: (state, device) => {
     state.device = device
   }
 }
