@@ -1,6 +1,7 @@
 <template>
   <div :class="classObj"
        class="app-wrapper">
+    <!-- 根据设备更改页面布局？ -->
     <div v-if="device==='mobile'&&sidebar.opened"
          class="drawer-bg"
          @click="handleClickOutside" />

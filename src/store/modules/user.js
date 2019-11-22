@@ -1,5 +1,8 @@
+// 这里引入的内容是模拟的服务器返回结果
 import { login, logout, getInfo } from '@/api/user'
+// 这里引入的内容是模拟的获取的cookie值
 import { getToken, setToken, removeToken } from '@/utils/auth'
+// 加载重置路由方法？
 import { resetRouter } from '@/router'
 const state = {
   token: getToken(),
@@ -74,6 +77,7 @@ const actions = {
 
 }
 
+// 这里输出一个namespaced是什么意思
 export default {
   namespaced: true,
   state,

@@ -8,6 +8,7 @@ const state = {
 }
 
 const mutations = {
+  // 这个是指边栏层级开关？？
   TOGGLE_SIDEBAR: state => {
     state.sidebar.opened = !state.sidebar.opened
     state.sidebar.withoutAnimation = false

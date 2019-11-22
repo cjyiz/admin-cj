@@ -1,7 +1,9 @@
 <template>
   <section class="app-main">
+    <!-- 这里使用了vue动画 -->
     <transition name="fade-transform"
                 mode="out-in">
+      <!-- 设置key是避免生命周期钩子在vue组件复用时不会调用 -->
       <router-view :key="key" />
     </transition>
   </section>
