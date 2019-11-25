@@ -4,6 +4,7 @@ import store from './store'
 import router from './router'
 import './plugins/element.js'
 import '@/styles/index.scss'
+import '@/icons'
 Vue.config.productionTip = false
 
 new Vue({
