@@ -13,9 +13,9 @@
 
       <el-form-item prop="username">
         <span class="svg-container">
-          <!-- <svg-icon icon-class="user" /> -->
+          <svg-icon icon-class="user" />
           <!-- 使用elment图标替代本地图标 -->
-          <i class="el-icon-user-solid"></i>
+          <!-- <i class="el-icon-user-solid"></i> -->
         </span>
         <el-input ref="username"
                   v-model="loginForm.username"
@@ -28,8 +28,9 @@
 
       <el-form-item prop="password">
         <span class="svg-container">
-          <!-- <svg-icon icon-class="password" /> -->
-          <i class='el-icon-lock'></i>
+          <svg-icon icon-class="table" />
+          <svg-icon></svg-icon>
+          <!-- <i class='el-icon-lock'></i> -->
         </span>
         <el-input :key="passwordType"
                   ref="password"

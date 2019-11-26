@@ -1,5 +1,5 @@
 module.export = {
-  title: 'Vue Admin Template',
+  title: 'cjyiz我打野',
   fixedHeader: false,
   sidebarLogo: false
 }
