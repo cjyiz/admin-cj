@@ -28,9 +28,7 @@
 
       <el-form-item prop="password">
         <span class="svg-container">
-          <svg-icon icon-class="table" />
-          <svg-icon></svg-icon>
-          <!-- <i class='el-icon-lock'></i> -->
+          <svg-icon icon-class="password" />
         </span>
         <el-input :key="passwordType"
                   ref="password"
