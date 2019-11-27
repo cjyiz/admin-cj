@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie'
 const state = {
   sidebar: {
-    opend: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
+    opend: true,
+    // opend: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
     withoutAnimation: false
   },
   device: 'desktop'

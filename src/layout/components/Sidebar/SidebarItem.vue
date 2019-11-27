@@ -1,5 +1,8 @@
 <template>
-  <div v-if="!item.hidden"
+  <!-- <div
+  v-if="!item.hidden"
+       class="menu-wrapper"> -->
+  <div v-if='cjyiz'
        class="menu-wrapper">
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
       <app-link v-if="onlyOneChild.meta"
@@ -41,7 +44,6 @@ import FixiOSBug from './FixiOSBug'
 export default {
   name: 'SidebarItem',
   components: { Item, AppLink },
-  // components: { AppLink },
   mixins: [FixiOSBug],
   props: {
     // route object
@@ -61,12 +63,22 @@ export default {
   data () {
     // To fix https://github.com/PanJiaChen/vue-admin-template/issues/237
     // TODO: refactor with render function
-    this.onlyOneChild = null
-    return {}
+    // this.onlyOneChild = null
+    return {
+      cjyiz: true
+      // onlyOneChild: {
+      //   meta: {
+      //     icon: 'link',
+      //     title: '链接'
+      //   },
+      //   path: 'table'
+      // }
+    }
   },
   methods: {
     hasOneShowingChild (children = [], parent) {
       const showingChildren = children.filter(item => {
+        console.log(item)
         if (item.hidden) {
           return false
         } else {

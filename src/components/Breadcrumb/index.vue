@@ -1,6 +1,7 @@
 <template>
   <el-breadcrumb class="app-breadcrumb"
                  separator="/">
+    <!-- vue自带的动画效果 -->
     <transition-group name="breadcrumb">
       <el-breadcrumb-item v-for="(item,index) in levelList"
                           :key="item.path">

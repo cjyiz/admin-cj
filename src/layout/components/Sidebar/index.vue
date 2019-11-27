@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'has-logo':showLogo}">123
+  <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo"
           :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
@@ -51,7 +51,8 @@ export default {
       return variables
     },
     isCollapse () {
-      return !this.sidebar.opened
+      // return !this.sidebar.opened
+      return false
     }
   }
 }

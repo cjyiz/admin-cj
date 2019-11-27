@@ -14,8 +14,6 @@
       <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
-          <!-- 使用elment图标替代本地图标 -->
-          <!-- <i class="el-icon-user-solid"></i> -->
         </span>
         <el-input ref="username"
                   v-model="loginForm.username"
