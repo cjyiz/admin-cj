@@ -21,41 +21,35 @@ export const constantRoutes = [
     children: [
       {
         path: 'dashboard',
-        name: 'Dashboard',
+        name: '知识库管理',
         component: () => import('@/views/Dashboard.vue'),
-        meta: { title: 'Dashboard', icon: 'dashboard' }
+        meta: { title: '知识库管理', icon: 'dashboard' }
       }
     ]
   },
   {
     path: '/example',
-    name: 'Example',
+    name: '知识管理',
     component: Layout,
     redirect: '/example/table',
-    meta: { title: 'Example', icon: 'example' },
+    meta: { title: '知识管理', icon: 'example' },
     children: [
       {
         path: 'table',
         name: 'Table',
         component: () => import('@/views/Table.vue'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: { title: '条件搜索', icon: 'table' }
       }, {
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/Tree.vue'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-  {
-    path: '/form',
-    component: Layout,
-    children: [
+        meta: { title: '我的收藏', icon: 'tree' }
+      },
       {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/Form.vue'),
-        meta: { title: 'Form', icon: 'form' }
+        path: 'tree',
+        name: 'Tree',
+        component: () => import('@/views/myStore.vue'),
+        meta: { title: '我的库管理', icon: 'tree' }
       }
     ]
   },
@@ -65,49 +59,35 @@ export const constantRoutes = [
     redirect: '/nested/menu1',
     name: 'Nested',
     meta: {
-      title: 'Nested',
+      title: '系统管理',
       icon: 'nested'
     },
     children: [
       {
         path: 'menu1',
         component: () => import('@/views/nested/menu1/index'),
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
+        name: '用户管理',
+        meta: { title: '用户管理' },
         children: [
           {
             path: 'menu1-1',
             component: () => import('@/views/nested/menu1/menu1-1/index.vue'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
+            name: '普通用户',
+            meta: { title: '普通用户' }
           },
           {
             path: 'menu1-2',
             component: () => import('@/views/nested/menu1/menu1-2/index.vue'),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' }
+            name: '高级用户',
+            meta: { title: '高级用户' }
           }
         ]
       },
       {
         path: 'menu2',
         component: () => import('@/views/nested/menu2/index'),
-        name: 'Menu2',
-        meta: { title: 'Menu2' },
-        children: [
-          {
-            path: 'menu2-1',
-            component: () => import('@/views/nested/menu2/menu2-1/index.vue'),
-            name: 'Menu2-1',
-            meta: { title: 'Menu2-1' }
-          },
-          {
-            path: 'menu2-2',
-            component: () => import('@/views/nested/menu2/menu2-2/index.vue'),
-            name: 'Menu2-2',
-            meta: { title: 'Menu2-2' }
-          }
-        ]
+        name: '数据库管理',
+        meta: { title: '数据库管理' }
       }
     ]
   }
